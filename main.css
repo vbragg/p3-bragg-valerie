@@ -7,3 +7,56 @@
 article, aside, details, figcaption, figure, footer, header, main, nav, section, summary {
     display:block;
 }
+
+
+h1, #moveright p, #moveleft p {
+	font-family: 'Mr Bedfort', cursive;
+}
+
+header, main {
+	text-align: center;
+}
+
+h1 {
+	font-size: 1.5rem;
+	padding: 10px 0;
+}
+
+#fortune {
+	font-size: 4rem;
+	display: block;
+}
+
+p {
+	font-family: 'Comfortaa', cursive;
+}
+
+.flexstretch {
+	display: flex;
+	justify-content: center;
+}
+
+#orange {
+	background-color: #d68928;
+}
+
+#purple {
+	background-color: #8c2c8d;
+}
+
+#yellow {
+	background-color: #f1d92f;
+}
+
+#green {
+	background-color: #38b449;
+}
+
+#orange, #purple, #yellow, #green {
+	padding: 50px;
+	margin: 5px;
+}
+
+section {
+	padding-top: 20px;
+}
