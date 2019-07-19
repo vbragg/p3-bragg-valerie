@@ -9,7 +9,7 @@ article, aside, details, figcaption, figure, footer, header, main, nav, section,
 }
 
 
-h1, #moveright p, #moveleft p {
+h1, .moveright p, .moveleft p {
 	font-family: 'Mr Bedfort', cursive;
 }
 
@@ -36,6 +36,10 @@ p {
 	justify-content: center;
 }
 
+.moveout {
+	justify-content: space-around !important;
+}
+
 #orange {
 	background-color: #d68928;
 }
@@ -59,4 +63,12 @@ p {
 
 section {
 	padding-top: 20px;
+}
+
+.moveright {
+	 /*not sure if these % will work*/
+}
+
+.move-left {
+	
 }
