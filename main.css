@@ -62,7 +62,7 @@ ul li {
 }
 
 .leftover {
-	margin-left: 100px;
+	margin-right: 300px;
 }
 
 .rightover {
@@ -72,6 +72,7 @@ ul li {
 #orange, #purple, #yellow, #green {
 	padding: 50px;
 	margin: 5px;
+	width: 100px;
 }
 
 section {
