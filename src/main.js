@@ -1,25 +1,32 @@
 //Global Variables
 
-const moveBoxes = document.getElementsByClassName('moveout')
+const moveBoxesRight = document.getElementsByClassName('moveoutright');
+const moveBoxesLeft = document.getElementsByClassName('moveoutleft');
 const rightBoxes = document.getElementById('moveright');
 const leftBoxes = document.getElementById('moveleft');
+const moveBoxes = document.getElementsByClassName('move');
 
 //Our Function
 function loopThrough() {
 
   const changeSpace = () => {
-    this.classList.toggle('moveright');
-    this.classList.toggle('moveleft'); //check to see if you need a ; after each line
+    leftBoxes.classList.toggle('leftover');
+    rightBoxes.classList.toggle('rightover');
   }
-  for(let i =0; i < this.textContent.length; i++){
-    changeSpace();
-  }
+
+  for(let i =0; i < this.textContent.length * 2; i++){
+    setTimeout(changeSpace, i * 1000);
+  };
 };
 
 
 //Event Listener
-for (let i = 0; i < moveBoxes.length; i++) {
-  moveBoxes[i].addEventListener('click', loopThrough);
+for (let i = 0; i < moveBoxesRight.length; i++) {
+  moveBoxesRight[i].addEventListener('click', loopThrough);
+};
+
+for (let i = 0; i < moveBoxesLeft.length; i++) {
+  moveBoxesLeft[i].addEventListener('click', loopThrough);
 };
 
 /*
@@ -29,4 +36,4 @@ for (let i = o; i < leftBoxes.length; i++) {
 */
 
 
-//THIS IS NOT WORKING
+//WANT TO TOGGLE BACK AND FORTH ON FLEXSTRETCH BETWEEN JUSTIFY CONTENT CENTER AND JUSTIFY CONTENT SPACE-BETWEEN

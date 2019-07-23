@@ -31,14 +31,10 @@ p {
 	font-family: 'Comfortaa', cursive;
 }
 
-.flexstretch {
+/*.flexstretch {
 	display: flex;
 	justify-content: center;
-}
-
-.moveout {
-	justify-content: space-around !important;
-}
+} */
 
 #orange {
 	background-color: #d68928;
@@ -56,6 +52,23 @@ p {
 	background-color: #38b449;
 }
 
+ul {
+	display: inline-block;
+	text-align: center;
+}
+
+ul li {
+	list-style: none;
+}
+
+.leftover {
+	margin-left: 100px;
+}
+
+.rightover {
+	margin-right: 300px;
+}
+
 #orange, #purple, #yellow, #green {
 	padding: 50px;
 	margin: 5px;
@@ -65,10 +78,9 @@ section {
 	padding-top: 20px;
 }
 
-.moveright {
-	 /*not sure if these % will work*/
-}
 
-.move-left {
-	
+.outside {
+	display: flex;
+	justify-content: space-between !important;
+	margin: -50% !important;
 }
