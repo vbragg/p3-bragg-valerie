@@ -80,8 +80,6 @@ section {
 }
 
 
-.outside {
-	display: flex;
-	justify-content: space-between !important;
-	margin: -50% !important;
+.hide {
+	display: none;
 }
