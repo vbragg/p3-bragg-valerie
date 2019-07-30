@@ -83,3 +83,34 @@ section {
 .hide {
 	display: none;
 }
+
+#displayfortune {
+	position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+	font-family: 'Mr Bedfort', cursive;
+	font-size: 1.5rem;
+
+}
+
+#centered {
+  position: relative;
+  text-align: center;
+}
+
+#centered img {
+	display: block;
+	margin: auto;
+	width: 100%;
+	max-width: 1000px;
+}
+
+	/*
+	background-image: linear-gradient(to right, #33ccff, #ccf2ff);
+	padding: 10% 20%;
+	margin: 5%;
+	font-family: 'Mr Bedfort', cursive;
+	font-size: 1.5rem; */
+
+}

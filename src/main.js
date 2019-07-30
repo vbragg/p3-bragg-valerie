@@ -14,7 +14,9 @@ const leftBoxesTwo = document.getElementById('moveleft-two');
 const rightBoxesTwo = document.getElementById('moveright-two');
 //const stringValue = //String.valueOf(moveBoxesLeftTwo);
 
-//Our Function
+//OUR FUNCTIONS FOR COLORS AND NUMBERS
+
+//This is the color layer
 function loopThrough() {
 
   const changeSpace = () => {
@@ -26,6 +28,7 @@ function loopThrough() {
   }
 };
 
+//This is the numbers layer
 function loopThroughTwo() {
 
   const changeSpace = () => {
@@ -38,6 +41,7 @@ function loopThroughTwo() {
   }
 };
 
+//This changes the layer from colors to numbers
 function changeLayer() {
   const swap = () => {
     layerOne.classList.add('hide');
@@ -47,10 +51,7 @@ function changeLayer() {
 
 };
 
-
-
-
-//Event Listener
+//Event Listeners for above functions
 for (let i = 0; i < moveBoxesLeft.length; i++) {
   moveBoxesLeft[i].addEventListener('click', loopThrough);
   moveBoxesLeft[i].addEventListener('click', changeLayer);
@@ -65,7 +66,7 @@ for (let i = 0; i < moveBoxesRight.length; i++) {
   moveBoxesRightTwo[i].addEventListener('click', changeLayerTwo);
 };
 
-//THIS CONTROLS THE RANDOM FORTUNE AT THE END
+//***********THIS CONTROLS THE RANDOM FORTUNE AT THE END***********
 
 //variables
 
@@ -88,27 +89,22 @@ let randomFortune = [
 ];
 
 const replaceParagraph = document.getElementById('displayfortune');
+const crystalBall = document.getElementById('centered');
+const introParagraph = document.getElementById('intro');
 let randomizeFortunes = Math.floor(Math.random()*15); // THis gets random to return a total of 3 numbers
 
-
+//function to change from numbers to display fortune
 function changeLayerTwo() {
   const swapTwo = () => {
     layerTwo.classList.add('hide');
+    introParagraph.classList.add('hide');
+    crystalBall.classList.remove('hide');
     replaceParagraph.classList.remove('hide');
   };
   const textContent = this.textContent;
   setTimeout(swapTwo, Number(textContent) * 2 * 400);
 
 };
-//function
-/*function displayFortune() {
-  const swapFortune = () => {
-    layerTwo.classList.add('hide');
-    replaceParagraph.classList.remove('hide');
-  }
-  setTimeout(swapFortune, replaceParagraph.innerHTML = randomFortune[randomizeFortunes]);
-}; */
-
 
 replaceParagraph.innerHTML = randomFortune[randomizeFortunes];
 
