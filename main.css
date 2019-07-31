@@ -65,13 +65,7 @@ ul li {
 		font-size: 1.25rem;
  }
 
-.leftover {
-	margin-right: 20%;
-}
 
-.rightover {
-	margin-left: 20%;
-}
 
 #orange, #purple, #yellow, #green {
 	padding: 50px;
@@ -134,9 +128,44 @@ to {
 
 }
 
+/********START MOVEMENT TOGGLE CLASSES **********/
+
+.leftover {
+	margin-right: 20%;
+}
+
+.rightover {
+	margin-left: 20%;
+}
+
+.upboxorange {
+	position: absolute;
+	top: 10%;
+	left: 10%;
+}
+
+.upboxgreen {
+	position: absolute;
+	top: 10%;
+	right: 10%;
+}
+
+.downboxpurple {
+	position: absolute;
+	top: 60%;
+	left: 10%;
+}
+
+.downboxyellow {
+	position: absolute;
+	top: 60%;
+	right: 10%;
+}
+
+/********END MOVEMENT TOGGLE CLASSES **********/
 
 
-/*******MEDIA QUERIES ********/
+/******* START MEDIA QUERIES ********/
 @media (max-width: 650px) {
 	#orange, #purple, #yellow, #green {
 		padding: 25px;

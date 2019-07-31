@@ -4,7 +4,18 @@ const moveBoxesRight = document.getElementsByClassName('moveoutright');
 const moveBoxesLeft = document.getElementsByClassName('moveoutleft');
 const rightBoxes = document.getElementById('moveright');
 const leftBoxes = document.getElementById('moveleft');
+const topBoxes = document.getElementsByClassName('moveup');
+const bottomBoxes =document.getElementsByClassName('movedown');
 const layerOne = document.getElementById('layer-one');
+
+
+//Variables needed for toggling to get boxes to move up
+const orangeBox =document.getElementById('orange');
+const greenBox = document.getElementById('green');
+const purpleBox = document.getElementById('purple');
+const yellowBox = document.getElementById('yellow');
+
+
 
 //Global layer two variables
 const layerTwo = document.getElementById('layer-two');
@@ -23,10 +34,22 @@ function loopThrough() {
     leftBoxes.classList.toggle('leftover');
     rightBoxes.classList.toggle('rightover');
   };
-  for(let i =0; i < this.textContent.length * 2; i++){
-    setTimeout(changeSpace, i * 400);
+  const changeSpaceUp = () => {
+    orangeBox.classList.toggle('upboxorange');
+    greenBox.classList.toggle('upboxgreen');
+    purpleBox.classList.toggle('downboxpurple');
+    yellowBox.classList.toggle('downboxyellow');
+  };
+  for (let i =0; i < this.textContent.length * 2; i++){
+    if([0, 1, 4, 5, 8, 9, 12, 13, 16, 17, 20, 21].indexOf(i) > -1) {
+      setTimeout(changeSpace, i * 400);
+    } else {
+      setTimeout(changeSpaceUp, i * 400);
+    }
   }
 };
+
+//ABOVE ISN'T WORKING. MAYBE TRY BREAKING EACH BOX INTO ITS OWN VARIABLE AND TOGGLING IT THAT WAY?
 
 //This is the numbers layer
 function loopThroughTwo() {
@@ -35,9 +58,19 @@ function loopThroughTwo() {
     leftBoxesTwo.classList.toggle('leftover');
     rightBoxesTwo.classList.toggle('rightover');
   };
+  const changeSpaceUp = () => {
+    orangeBox.classList.toggle('upboxorange');
+    greenBox.classList.toggle('upboxgreen');
+    purpleBox.classList.toggle('downboxpurple');
+    yellowBox.classList.toggle('downboxyellow');
+  };
   const textContent = this.textContent;
   for(let i =0; i < Number(textContent) * 2; i++){
+    if([0, 1, 4, 5, 8, 9, 12, 13, 16, 17, 20, 21].indexOf(i) > -1) {
     setTimeout(changeSpace, i * 400);
+    } else {
+    setTimeout(changeSpaceUp, i * 400);
+    }
   }
 };
 
