@@ -35,19 +35,19 @@ p {
 	padding-top: 5%;
 }
 
-#orange {
+#orange, #orange-two {
 	background-color: #d68928;
 }
 
-#purple {
+#purple, #purple-two {
 	background-color: #8c2c8d;
 }
 
-#yellow {
+#yellow, #yellow-two {
 	background-color: #f1d92f;
 }
 
-#green {
+#green, #green-two {
 	background-color: #38b449;
 }
 
@@ -67,7 +67,7 @@ ul li {
 
 
 
-#orange, #purple, #yellow, #green {
+#orange, #purple, #yellow, #green, #orange-two, #purple-two, #yellow-two, #green-two{
 	padding: 50px;
 	margin: 3%;
 	width: 85px;
@@ -167,7 +167,7 @@ to {
 
 /******* START MEDIA QUERIES ********/
 @media (max-width: 650px) {
-	#orange, #purple, #yellow, #green {
+	#orange, #purple, #yellow, #green, #orange-two, #purple-two, #yellow-two, #green-two {
 		padding: 25px;
 		margin: 3%;
 		width: 50px;

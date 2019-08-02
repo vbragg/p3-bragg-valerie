@@ -9,11 +9,17 @@ const bottomBoxes =document.getElementsByClassName('movedown');
 const layerOne = document.getElementById('layer-one');
 
 
-//Variables needed for toggling to get boxes to move up
+//Variables needed for toggling to get boxes to move up in layer one
 const orangeBox =document.getElementById('orange');
 const greenBox = document.getElementById('green');
 const purpleBox = document.getElementById('purple');
 const yellowBox = document.getElementById('yellow');
+
+//Variables needed for toggling to get boxes to move up in layer two
+const orangeBoxTwo =document.getElementById('orange-two');
+const greenBoxTwo = document.getElementById('green-two');
+const purpleBoxTwo= document.getElementById('purple-two');
+const yellowBoxTwo = document.getElementById('yellow-two');
 
 
 
@@ -59,10 +65,10 @@ function loopThroughTwo() {
     rightBoxesTwo.classList.toggle('rightover');
   };
   const changeSpaceUp = () => {
-    orangeBox.classList.toggle('upboxorange');
-    greenBox.classList.toggle('upboxgreen');
-    purpleBox.classList.toggle('downboxpurple');
-    yellowBox.classList.toggle('downboxyellow');
+    orangeBoxTwo.classList.toggle('upboxorange');
+    greenBoxTwo.classList.toggle('upboxgreen');
+    purpleBoxTwo.classList.toggle('downboxpurple');
+    yellowBoxTwo.classList.toggle('downboxyellow');
   };
   const textContent = this.textContent;
   for(let i =0; i < Number(textContent) * 2; i++){
