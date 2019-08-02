@@ -31,23 +31,23 @@ p {
 	font-family: 'Comfortaa', cursive;
 }
 
-#layer-one, #layer-two {
+#layer-one, #layer-two, #layer-three {
 	padding-top: 5%;
 }
 
-#orange, #orange-two {
+#orange, #orange-two, #orange-three {
 	background-color: #d68928;
 }
 
-#purple, #purple-two {
+#purple, #purple-two, #purple-three {
 	background-color: #8c2c8d;
 }
 
-#yellow, #yellow-two {
+#yellow, #yellow-two, #yellow-three {
 	background-color: #f1d92f;
 }
 
-#green, #green-two {
+#green, #green-two, #green-three {
 	background-color: #38b449;
 }
 
@@ -67,7 +67,7 @@ ul li {
 
 
 
-#orange, #purple, #yellow, #green, #orange-two, #purple-two, #yellow-two, #green-two{
+#orange, #purple, #yellow, #green, #orange-two, #purple-two, #yellow-two, #green-two, #orange-three, #purple-three, #yellow-three, #green-three{
 	padding: 50px;
 	margin: 3%;
 	width: 85px;
@@ -167,7 +167,7 @@ to {
 
 /******* START MEDIA QUERIES ********/
 @media (max-width: 650px) {
-	#orange, #purple, #yellow, #green, #orange-two, #purple-two, #yellow-two, #green-two {
+	#orange, #purple, #yellow, #green, #orange-two, #purple-two, #yellow-two, #green-two, #orange-three, #purple-three, #yellow-three, #green-three {
 		padding: 25px;
 		margin: 3%;
 		width: 50px;

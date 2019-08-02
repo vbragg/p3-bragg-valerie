@@ -28,8 +28,13 @@ const layerTwo = document.getElementById('layer-two');
 const moveBoxesRightTwo = document.getElementsByClassName('moveoutright-two');
 const moveBoxesLeftTwo = document.getElementsByClassName('moveoutleft-two');
 const leftBoxesTwo = document.getElementById('moveleft-two');
-const rightBoxesTwo = document.getElementById('moveright-two');
-//const stringValue = //String.valueOf(moveBoxesLeftTwo);
+const rightBoxesTwo = document.getElementById('moveright-two')
+
+//global layer three variables
+
+const layerThree = document.getElementById('layer-three');
+const layerThreeButtons = document.getElementById('orange-three');
+
 
 //OUR FUNCTIONS FOR COLORS AND NUMBERS
 
@@ -90,6 +95,15 @@ function changeLayer() {
 
 };
 
+function changeLayerTwo() {
+  const swapTwo = () => {
+    layerTwo.classList.add('hide');
+    layerThree.classList.remove('hide');
+  }
+  const textContent = this.textContent;
+  setTimeout(swapTwo, Number(textContent) * 2 * 400);
+}
+
 //Event Listeners for above functions
 for (let i = 0; i < moveBoxesLeft.length; i++) {
   moveBoxesLeft[i].addEventListener('click', loopThrough);
@@ -133,18 +147,18 @@ const introParagraph = document.getElementById('intro');
 let randomizeFortunes = Math.floor(Math.random()*15); // THis gets random to return a total of 3 numbers
 
 //function to change from numbers to display fortune
-function changeLayerTwo() {
-  const swapTwo = () => {
-    layerTwo.classList.add('hide');
+function changeLayerThree() {
+  const swapThree = () => {
+    layerThree.classList.add('hide');
     introParagraph.classList.add('hide');
     crystalBall.classList.remove('hide');
     replaceParagraph.classList.remove('hide');
-  };
-  const textContent = this.textContent;
-  setTimeout(swapTwo, Number(textContent) * 2 * 400);
+  }
+  setTimeout(swapThree, 100);
 
 };
 
-replaceParagraph.innerHTML = randomFortune[randomizeFortunes];
 
-changeLayerTwo();
+layerThreeButtons.addEventListener('click', changeLayerThree);
+
+replaceParagraph.innerHTML = randomFortune[randomizeFortunes];
