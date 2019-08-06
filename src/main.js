@@ -33,7 +33,7 @@ const rightBoxesTwo = document.getElementById('moveright-two')
 //global layer three variables
 
 const layerThree = document.getElementById('layer-three');
-const layerThreeButtons = document.getElementById('orange-three');
+const layerThreeButtons = document.getElementsByClassName('layerthreep');
 
 
 //OUR FUNCTIONS FOR COLORS AND NUMBERS
@@ -158,7 +158,8 @@ function changeLayerThree() {
 
 };
 
-
-layerThreeButtons.addEventListener('click', changeLayerThree);
+for (let i = 0; i < layerThreeButtons.length; i++) {
+  layerThreeButtons[i].addEventListener('click', changeLayerThree);
+}
 
 replaceParagraph.innerHTML = randomFortune[randomizeFortunes];
